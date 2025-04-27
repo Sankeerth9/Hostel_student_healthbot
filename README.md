@@ -4,14 +4,61 @@ A Python CLI application that provides intelligent health advice using Gemini AI
 
 ## Features
 
-- Beautiful terminal UI using Rich
-- Gemini AI integration for intelligent health advice
-- Symptom keyword analysis with weighted scoring
-- SQLite database for persistent storage
-- Health history tracking and export
-- Interactive validation and confirmation dialogs
-- Urgent care alerts with visual indicators
-- Secure API key management
+### Core Functionalities
+
+1. **AI-Powered Health Advice**
+   - Integration with Google's Gemini AI for intelligent health recommendations
+   - Context-aware responses based on symptom descriptions
+   - Personalized advice considering student lifestyle factors
+   - Emergency situation detection and immediate alerts
+
+2. **Symptom Analysis System**
+   - Advanced keyword analysis with weighted scoring
+   - Multi-factor severity assessment
+   - Pattern recognition for symptom clusters
+   - Real-time severity level calculation
+
+3. **Health History Management**
+   - SQLite database for persistent storage
+   - Comprehensive health log tracking
+   - Timestamped entries with detailed metadata
+   - Export functionality for medical records
+
+4. **User Interface**
+   - Rich terminal UI with color-coded outputs
+   - Interactive menus and dialogs
+   - Progress indicators and loading animations
+   - Visual severity indicators (🚨 for urgent cases)
+
+5. **Security & Configuration**
+   - Environment-based API key management
+   - Secure credential storage
+   - Configurable settings through .env file
+   - Input validation and sanitization
+
+## Technologies Used
+
+### Backend
+- **Python 3.x**: Core programming language
+- **SQLite**: Lightweight database for health logs
+- **Google Gemini AI**: AI model for health advice generation
+- **python-dotenv**: Environment variable management
+- **Rich**: Terminal formatting and UI components
+- **SQLAlchemy**: Database ORM and management
+- **JSON**: Configuration and data storage
+
+### Frontend
+- **Rich Library**: Terminal UI components
+  - Tables for health history display
+  - Progress bars and spinners
+  - Color-coded text and formatting
+  - Interactive prompts and dialogs
+
+### Development Tools
+- **Git**: Version control
+- **pip**: Package management
+- **JSON**: Configuration files
+- **Environment Variables**: Secure configuration
 
 ## Setup
 
@@ -36,25 +83,55 @@ python health_bot.py
 
 ### Menu Options
 
-1. **Report Symptoms**: Enter your symptoms and get AI-powered health advice
-   - Input validation ensures meaningful descriptions
-   - Keyword analysis provides severity scoring
-   - Gemini AI generates personalized recommendations
+1. **Report Symptoms**
+   - Enter detailed symptom descriptions
+   - AI-powered analysis and recommendations
+   - Severity assessment and scoring
+   - Immediate care suggestions
+   - Follow-up advice
 
-2. **View Health History**: See your last 5 health logs in a formatted table
-   - Color-coded entries based on severity
+2. **View Health History**
+   - Last 5 health logs display
+   - Color-coded severity indicators
    - Detailed symptom and remedy information
+   - Timestamp tracking
+   - Pattern analysis
 
-3. **Delete Last Entry**: Remove the most recent health log
-   - Confirmation dialog for safety
-   - Immediate database update
+3. **Delete Last Entry**
+   - Safe deletion with confirmation
+   - Database integrity maintenance
+   - Transaction-based operations
+   - Backup before deletion
 
-4. **Export History**: Save all health logs to a text file
-   - Timestamped export files
-   - Complete symptom and remedy history
+4. **Export History**
+   - Complete health log export
+   - Timestamped file generation
+   - Structured data format
+   - Backup functionality
 
-5. **Exit**: Close the application
-   - Confirmation dialog before exiting
+5. **Exit**
+   - Graceful application termination
+   - Database connection cleanup
+   - Session management
+
+## Technical Details
+
+### Database Schema
+- Health logs table with timestamp, symptoms, severity, and remedies
+- Indexed queries for efficient data retrieval
+- Transaction support for data integrity
+
+### AI Integration
+- Gemini AI API integration
+- Context-aware prompt engineering
+- Response parsing and formatting
+- Error handling and fallback mechanisms
+
+### Security Features
+- API key encryption
+- Input sanitization
+- SQL injection prevention
+- Secure file handling
 
 ## Notes
 
